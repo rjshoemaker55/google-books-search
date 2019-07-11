@@ -20,6 +20,7 @@ class App extends Component {
     e.preventDefault();
     API.searchBooks(searchInput)
       .then(res => {
+        console.log(res)
         if (res.data.status === 'error') {
           throw new Error(res.data.message);
         }
